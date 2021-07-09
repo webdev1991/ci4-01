@@ -8,21 +8,15 @@ class Pages extends Controller
 {
     public function index()
     {
-        return view('welcome_message');
+        echo view('templates/header');
+        echo view('pages/home');
+        echo view('templates/footer');
     }
 
-    public function view($page = 'home')
+    public function about()
     {
-         if ( ! is_file(APPPATH.'/Views/pages/'.$page.'.php'))
-    {
-        // Whoops, we don't have a page for that!
-        throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
-    }
-
-    $data['title'] = ucfirst($page); // Capitalize the first letter
-
-    echo view('templates/header', $data);
-    echo view('pages/'.$page, $data);
-    echo view('templates/footer', $data);
+        echo view('templates/header');
+        echo view('pages/about');
+        echo view('templates/footer');
     }
 }

@@ -16,8 +16,8 @@
       <a class="navbar-brand" href="#">CodeIgniter4</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
-      <li class="active"><a href="<?php echo base_url(); ?>/about">About</a></li>
+      <li class="active"><a href="<?php echo base_url(); ?>/pages">Home</a></li>
+      <li class="active"><a href="<?php echo base_url(); ?>/pages/about">About</a></li>
       <li class="active"><a href="<?php echo base_url().'/contact'; ?>">Contact</a></li>
       <li class="active"><a href="<?php echo base_url().'/contact/show'; ?>">All Contact</a></li>
 
