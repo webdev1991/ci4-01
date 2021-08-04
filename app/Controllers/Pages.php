@@ -20,3 +20,4 @@ class Pages extends Controller
         echo view('templates/footer');
     }
 }
+
