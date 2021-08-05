@@ -46,6 +46,7 @@ class Contact extends Controller
                 'message'  => $this->request->getVar('message'),
             ]);
             
+
             echo view('contact');
             echo view('templates/footer');
         }
