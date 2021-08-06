@@ -10,5 +10,5 @@ class StudentModel extends Model
 
     protected $primeryKey = 'id';
  
-    protected $allowedFields = ['rollno', 'name', 'dob', 'class'];
+    protected $allowedFields = ['rollno', 'name'];
 }

@@ -13,7 +13,7 @@
  
     <div class="row">
       <div class="col-md-9">
-        <form action="<?php echo base_url('/contact/create') ?>" method="post" accept-charset="utf-8">
+        <form action="<?php echo base_url('/parller/parentdata') ?>" method="post" accept-charset="utf-8">
           
           <div class="form-group">
             <label for="formGroupExampleInput">Roll No.</label>
@@ -22,21 +22,21 @@
 
           <div class="form-group">
             <label for="formGroupExampleInput">Father Name</label>
-            <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Please enter father name">
+            <input type="text" name="father" class="form-control" id="formGroupExampleInput" placeholder="Please enter father name">
           </div> 
           <div class="form-group">
             <label for="formGroupExampleInput">Mother Name</label>
-            <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Please enter mother name">
+            <input type="text" name="mother" class="form-control" id="formGroupExampleInput" placeholder="Please enter mother name">
           </div> 
  
           <div class="form-group">
-            <label for="phone">Contact no</label>
+            <label for="phone">Phone no</label>
             <input type="phone" name="phone" class="form-control" id="phone" placeholder="Please enter phone number">    
           </div>   
  
           <div class="form-group">
-            <label for="message">Address</label>
-            <textarea name="message" class="form-control"></textarea>
+            <label for="address">Address</label>
+            <textarea name="address" class="form-control"></textarea>
           </div>
  
           <div class="form-group">

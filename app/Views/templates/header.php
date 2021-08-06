@@ -20,7 +20,8 @@
       <li class="active"><a href="<?php echo base_url(); ?>/pages/about">About</a></li>
       <li class="active"><a href="<?php echo base_url().'/contact'; ?>">Contact</a></li>
       <li class="active"><a href="<?php echo base_url().'/stuller'; ?>">Student</a></li>
-      <li class="active"><a href="<?php echo base_url().'/stuller/parent'; ?>">Parent</a></li>
+      <li class="active"><a href="<?php echo base_url().'/parller'; ?>">Parent</a></li>
+      <li class="active"><a href="<?php echo base_url().'/sealler'; ?>">Get Data</a></li>
       <li class="active"><a href="<?php echo base_url().'/contact/show'; ?>">All Contact</a></li>
 
     </ul>

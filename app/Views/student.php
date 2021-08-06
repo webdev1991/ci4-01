@@ -25,7 +25,7 @@
             <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
           </div> 
 
-          
+        
  
           <div class="form-group">
            <button type="submit" id="send_form" class="btn btn-success">Submit</button>
