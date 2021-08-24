@@ -33,10 +33,10 @@
 
 						<?php
 						 $connection = mysqli_connect("localhost","root","rootadmin","ci4");
-						 if(isset($_POST['search_by_rollno']))
+						 if(isset($_POST['search_by_roll_no']))
 						 {
-						 	$rollno = $_POST['rollno'];
-						 	$query = "SELECT * FROM student WHERE rollno='$rollno' ";		 	
+						 	$roll_no = $_POST['roll_no'];
+						 	$query = "SELECT * FROM student WHERE roll_no='$roll_no' ";	
 						 	$query_run = mysqli_query($connection, $query);
 
 						?>
@@ -61,7 +61,7 @@
 						    <tr>
 						     <h3>Student Data</h3>
 						      <td><?php echo $row['id']; ?></td>
-						      <td><?php echo $row['rollno']; ?></td>
+						      <td><?php echo $row['roll_no']; ?></td>
 						      <td><?php echo $row['name']; ?></td>
 						    </tr>
 						    <?php
@@ -95,7 +95,7 @@
 						 if(isset($_POST['search_by_rollno']))
 						 {
 						 	$rollno = $_POST['rollno'];
-						 	$query = "SELECT * FROM parent WHERE rollno='$rollno' ";		 	
+						 	$query = "SELECT * FROM parent WHERE rollno='$rollno' ";		
 						 	$query_run = mysqli_query($connection, $query);
 
 						?>

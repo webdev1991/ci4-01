@@ -22,33 +22,45 @@ class Stuller extends Controller
         
         echo view('templates/header'); 
         $val = $this->validate([
-            'rollno' => 'required',
-            'name' => 'required|min_length[3]'
+            'roll_no' => 'required',
+            'name' => 'required|min_length[3]',
+            'phone' => 'required',
+            'address' => 'required',
+            'course_id' => 'required'
         ]);
 
  
         $model = new StudentModel();
- 
+
+
+
         if (!$val)
         {
-            
+
             echo view('student', [
                    'validation' => $this->validator
-            ]);
+            ]); 
  
         }
         else
         { 
+
        
             $model->save([
-                'rollno' => $this->request->getVar('rollno'),
-                'name' => $this->request->getVar('name')                
+                'roll_no' => $this->request->getVar('roll_no'),
+                'name' => $this->request->getVar('name'),
+                'phone' => $this->request->getVar('phone'),
+                'address' => $this->request->getVar('address'),
+                'course_id' => $this->request->getVar('course_id'),                
             ]);
             
 
             echo view('student');
-            echo view('templates/footer');
+            echo "Record Save Successfully";
+    
         }
+
+    
     }
     
 }

@@ -23,6 +23,8 @@
       <li class="active"><a href="<?php echo base_url().'/parller'; ?>">Parent</a></li>
       <li class="active"><a href="<?php echo base_url().'/sealler'; ?>">Get Data</a></li>
       <li class="active"><a href="<?php echo base_url().'/contact/show'; ?>">All Contact</a></li>
+      <li class="active"><a href="<?php echo base_url().'/dbmsller'; ?>">dbms</a></li>
+
 
     </ul>
   </div>

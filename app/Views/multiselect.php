@@ -7,7 +7,7 @@
 -->
 </head>
 <body>
-  <h3 style="text-align: center;">Store Student Information..</h3>
+  <h3 style="text-align: center;">Insert Multi select data</h3>
  <div class="container">
     <br>
     
@@ -23,21 +23,6 @@
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
-          </div>
-
-          <div class="form-group">
-            <label for="name">DOB</label>
-            <input type="date" name="dob" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
-          </div> 
-
-          <div class="form-group">
-            <label for="name">Father Name</label>
-            <input type="text" name="fname" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
-          </div> 
-
-          <div class="form-group">
-            <label for="name">Mother Name</label>
-            <input type="text" name="mname" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
           </div> 
 
            <div class="form-group">
@@ -80,9 +65,6 @@
         {
           $roll_no=$_POST['roll_no'];
           $name=$_POST['name'];
-          $dob=$_POST['dob'];
-          $fname=$_POST['fname'];
-          $mname=$_POST['mname'];
           $phone=$_POST['phone'];
           $address=$_POST['address'];
           //print_r($_POST['course_id']);
@@ -90,7 +72,7 @@
           foreach ($_POST['course_id'] as $key => $value) {
             $course_id=$_POST['course_id'][$key];
 
-            $sql = "INSERT INTO student (`roll_no`, `name`, dob, fname, mname, `phone`, `address`, `course_id`) VALUES ('$roll_no', '$name', '$dob', '$fname', '$mname', '$phone', '$address', '$course_id')";
+            $sql = "INSERT INTO student (`roll_no`, `name`, `phone`, `address`, `course_id`) VALUES ('$roll_no', '$name', '$phone', '$address', '$course_id')";
 
             $result = mysqli_query($conn, $sql);
           }

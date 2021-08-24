@@ -51,9 +51,10 @@ class Parller extends Controller
                 'address' => $this->request->getVar('address'),                
             ]);
             
-
+            
             echo view('parent');
             echo view('templates/footer');
+            
         }
     }
     
