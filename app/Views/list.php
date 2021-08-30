@@ -15,7 +15,7 @@
       <th scope="col">Message</th>
     </thead>
     <tbody>
-      <?php $i = 0; foreach ($table as $k) { ?>
+      <?php $i = 1; foreach ($table as $k) { ?>
 
         <tr>
           <th scope="row"><?php echo $i++ ;?></th>

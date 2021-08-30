@@ -1,10 +1,24 @@
+<?php 
+
+$conn = mysqli_connect("localhost", "root", "rootadmin", "ci4");
+$query = "SELECT * FROM `course`";
+
+$result1 = mysqli_query($conn, $query);
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Codeigniter 4 Form Validation Example</title>
-  <!--
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
--->
+  
+<link rel="stylesheet" href="<?php echo base_url().'/headerlink/select2.css'; ?>">
+<script src="<?php echo base_url().'/headerlink/select2.js'; ?>"></script>
+
+
 </head>
 <body>
   <h3 style="text-align: center;">Store Student Information..</h3>
@@ -50,28 +64,72 @@
             <input type="text" name="address" class="form-control" id="formGroupExampleInput" placeholder="Please address">
           </div> 
 
+<!--
           <div class="form-group">
             <label for="course_id">Course Id</label>
-            <select class="form-control" name="course_id[]" multiple="true" id="formGroupExampleInput" placeholder ="Please select option" >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
+            <select class="form-control" id="multiselect" name="course_id[]" multiple="true" id="formGroupExampleInput" placeholder ="Please select option" >
+              <option value="1">TALLY</option>
+              <option value="2">PHP</option>
+              <option value="3">jQuery</option>
+              <option value="4">Assembly</option>
+              <option value="5">Modelling</option>
+              <option value="6">Databases</option>
+              <option value="7">Cyber Security</option>
+              <option value="8"> TALLY</option>
+              <option value="9">User interfaces</option>
+              <option value="10">PHP</option>
             </select>
-          </div> 
+          </div>
+-->
+
+          <!--========= Select option using while loop ========-->  
+          <!--
+
+          <div class="form-group">
+            <label for="course_id">Course Id</label>
+
+            <select class="form-control" id="multiselect1" name="course_id[]" multiple="true">
+
+            <?php /* while($row = mysqli_fetch_array($result1)):;?>
+
+            <option value="<?php echo $row[0];?>"><?php echo $row[1];?></option>
+
+            <?php endwhile;   */?>
+
+             </select>
+          </div>
+
+          -->
+
+          <!--============ Select option using foreach loop =============-->
+
+          <div class="form-group">
+            <label for="course_id">Course Id</label>
+
+            <select class="form-control" id="multiselect1" name="course_id[]" multiple="true">
+
+              <?php
+
+              $course = array("C++","Tally","AI","Data Science","DAA","Networking");
+              foreach($course as $crs) {
+              ?>
+
+              <option><?php echo $crs; ?></option>
+            <?php } ?>
+
+
+            </select>
+          </div>
+
+            <!--================== End foreach loop ================-->
+
  
           <div class="form-group">
            <button type="submit" name="submit" id="send_form" class="btn btn-primary">Submit</button>
           </div>
         </form>
 
-        <?php
+        <?php 
 
         $conn = mysqli_connect("localhost", "root", "rootadmin", "ci4");
 
@@ -95,12 +153,29 @@
             $result = mysqli_query($conn, $sql);
           }
         }
-
+        
+        
           ?>
       </div>
  
     </div>
   
 </div>
+  
+  <script> 
+    
+    $(document).ready(function(){
+      $("#multiselect1").select2({
+        placeholder: "select course",
+        tags: true,
+        tokenSeparators: ['/',',',',',""]
+      });
+    })
+
+    
+  </script>
+
+
+
 </body>
 </html>
