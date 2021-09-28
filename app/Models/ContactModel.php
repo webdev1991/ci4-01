@@ -6,7 +6,7 @@ use CodeIgniter\Model;
  
 class ContactModel extends Model
 {
-    protected $table = 'contacts';
+    protected $table = 'studentX';
  
-    protected $allowedFields = ['name', 'email', 'message'];
+    protected $allowedFields = ['id','roll_no', 'name', 'dob','fname','mname', 'phone', 'address'];
 }

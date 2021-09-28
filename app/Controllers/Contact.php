@@ -61,4 +61,6 @@ class Contact extends Controller
         return view('list',$data);
 
     }
+
+    
 }

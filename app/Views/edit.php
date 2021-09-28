@@ -21,47 +21,48 @@ $results = mysqli_query($conn, $sql);
 
 </head>
 <body>
-  <h3 style="text-align: center;">Store Student Information..</h3>
+  <h3 style="text-align: center;">Edit Student Information..</h3>
  <div class="container">
     <br>
     
     <div class="row">
       <div class="col-md-9">
-        <form action="<?php echo base_url('/stuller/studentsdata') ?>" method="post" accept-charset="utf-8" >
+        <form action="<?php echo base_url('/stuller/update/'.$table['id']) ?>" method="post" accept-charset="utf-8" >
+          <input type="hidden" name="_method" value="PUT" />
           
           <div class="form-group">
             <label for="roll_no">Roll No.(code 329000)</label>
-            <input type="number" name="roll_no" class="form-control" id="formGroupExampleInput" placeholder="Please enter roll no">
+            <input type="number" name="roll_no" value="<?= $table['roll_no']; ?>" class="form-control" id="formGroupExampleInput" placeholder="Please enter roll no">
           </div> 
 
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
+            <input type="text" name="name" value="<?= $table['name']; ?>" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
           </div>
 
           <div class="form-group">
             <label for="name">DOB</label>
-            <input type="date" name="dob" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
+            <input type="date" name="dob" value="<?= $table['dob']; ?>" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
           </div> 
 
           <div class="form-group">
             <label for="name">Father Name</label>
-            <input type="text" name="fname" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
+            <input type="text" name="fname" value="<?= $table['fname']; ?>" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
           </div> 
 
           <div class="form-group">
             <label for="name">Mother Name</label>
-            <input type="text" name="mname" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
+            <input type="text" name="mname" value="<?= $table['mname']; ?>" class="form-control" id="formGroupExampleInput" placeholder="Please enter name">
           </div> 
 
            <div class="form-group">
             <label for="phone">Phone No.</label>
-            <input type="number" name="phone" class="form-control" id="formGroupExampleInput" placeholder="Please phone no">
+            <input type="number" name="phone" value="<?= $table['phone']; ?>" class="form-control" id="formGroupExampleInput" placeholder="Please phone no">
           </div> 
 
           <div class="form-group">
             <label for="address">Address</label>
-            <input type="text" name="address" class="form-control" id="formGroupExampleInput" placeholder="Please address">
+            <input type="text" name="address" value="<?= $table['address']; ?>" class="form-control" id="formGroupExampleInput" placeholder="Please address">
           </div> 
 
 <!--
@@ -128,7 +129,7 @@ $results = mysqli_query($conn, $sql);
 -->
           
           <div class="form-group">
-           <button type="submit" name="submit" id="send_form" class="btn btn-primary">Submit</button>
+           <button type="submit" name="submit" id="send_form" class="btn btn-primary">Update</button>
           </div>
         </form>
 

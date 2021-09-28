@@ -6,9 +6,9 @@ use CodeIgniter\Model;
  
 class StudentModel extends Model
 {
-    protected $table = 'student12';
+    protected $table = 'studentX';
 
     protected $primeryKey = 'id';
- 
-    protected $allowedFields = ['roll_no', 'name', 'phone', 'address', 'course_id'];
+
+    protected $allowedFields = ['roll_no', 'name', 'dob','fname','mname', 'phone', 'address'];
 }

@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="<?php echo base_url().'/headerlink/bootstrap.min.css'; ?>">
   <script src="<?php echo base_url().'/headerlink/jquery.min.js'; ?>"></script>
   <script src="<?php echo base_url().'/headerlink/bootstrap.min.js'; ?>"></script>
+
+<!-- Sweetalert2 -->  
+  <script src="<?php echo base_url().'/headerlink/sweetalert2.all.min.js'; ?>"></script>
+  <link rel="stylesheet" href="<?php echo base_url().'/headerlink/sweetalert2.min.css'; ?>">
+
+    <!-- CSS Alertify -->
+  <link rel="stylesheet" href="<?php echo base_url().'/headerlink/alertify.min.css'; ?>">
 </head>
 <body>
 
@@ -22,10 +29,29 @@
       <li class="active"><a href="<?php echo base_url().'/stuller'; ?>">Student</a></li>
       <li class="active"><a href="<?php echo base_url().'/parller'; ?>">Parent</a></li>
       <li class="active"><a href="<?php echo base_url().'/sealler'; ?>">Get Data</a></li>
-      <li class="active"><a href="<?php echo base_url().'/contact/show'; ?>">All Contact</a></li>
+      <li class="active"><a href="<?php echo base_url().'/stuller/show'; ?>">All Contact</a></li>
       <li class="active"><a href="<?php echo base_url().'/dbmsller'; ?>">dbms</a></li>
-
+      <li class="active"><a href="<?php echo base_url().'/authller'; ?>">Login</a></li>
 
     </ul>
   </div>
 </nav>
+
+
+
+ <!-- JavaScript Alertify -->
+  <script src="<?php echo base_url().'/headerlink/alertify.min.js'; ?>"></script>
+<script>
+  /*
+  //success message Alertify
+  $(document).ready(function () {
+
+    <?php /* if(session()->getFlashdata('status')) { ?>
+    alertify.set('notifier','position', 'top-left');
+    alertify.success("<?= session()->getFlashdata('status') ?>");
+  <?php } */ ?>
+
+  });
+
+  */
+</script>
